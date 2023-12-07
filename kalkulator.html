@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Papp Máté">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="description" content="Ez az oldal bemutatja a PM utazási iroda szolgáltatásait és ajánlatait.">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+    <title>PM Utazási Iroda</title>
+</head>
+<body>
+    <header>
+        <h1>PM Utazási Iroda</h1>
+        <h3>Nem hivatalos weboldal, csupán iskolai felhasználásra készült.</h3>
+    </header>
+    
+    <div class="flex-container">
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+        </ul>
+        <ul>
+            <li><a href="hongkong.html">Hongkong</a></li>
+        </ul>
+        <ul>
+            <li><a href="izland.html">Izland</a></li>
+        </ul>
+        <ul>
+            <li><a href="amerika.html">Amerika</a></li>
+        </ul>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <ul>
+            <li><a href="ajanlat.html">Ajánlat</a></li>
+        </ul>
+        <ul>
+            <li><li><a class='active' href="#">Kalkulátor</a></li>
+        </ul>
+    </nav>
+
+    <aside class="akcio">
+        Kalkulátorunkkal könnyen kiszámolhatja a várható költségeket!
+    </aside>
+    <table>
+        <tr><td colspan="6" class="th">Válassz egy helyszínt</td></tr>
+        <tr>
+            <td><label for="hely1">Izland</label></td>
+            <td><input type="radio" name="hely" id="hely1"></td>
+            <td><label for="hely2">Hongkong</label></td>
+            <td><input type="radio" name="hely" id="hely2"></td>
+            <td><label for="hely3">Amerika</label></td>
+            <td><input type="radio" name="hely" id="hely3"></td>
+        </tr>
+        <tr><td colspan="6" class="th">Opcionális kiegészítők (legalább egyet válasszon ki)</td></tr>
+        <tr>
+            <td><label for="repjegy">Repjegy</label></td>
+            <td><input type="checkbox" name="repjegy" id="repjegy"></td>
+        </tr>
+        <tr>
+            <td><label for="szallas">Szállás</label></td>
+            <td><input type="checkbox" name="szallas" id="szallas"></td>
+        </tr>
+        <tr>
+            <td><label for="felpanzio">Félpanzió</label></td>
+            <td><input type="checkbox" name="felpanzio" id="felpanzio"></td>
+        </tr>
+        <tr>
+            <td><label for="teljes_ellatas">Teljes ellátás</label></td>
+            <td><input type="checkbox" name="teljes_ellatas" id="teljes_ellatas"></td>
+        </tr>
+        <tr>
+            <td><label for="auto_berles">Autó bérlés</label></td>
+            <td><input type="checkbox" name="auto_berles" id="auto_berles"></td>
+        </tr>
+        <tr>
+            <td><label for="vezetett_tura">Vezetett túra</label></td>
+            <td><input type="checkbox" name="vezetett_tura" id="vezetett_tura"></td>
+        </tr>
+    </table>
+ <div class="result">
+     <input id="osszeg" size=15 type="text" readonly value="">
+     <input type="button" value="Kalkulálás" onclick="kalkulator()">
+</div>
+    
+</div>
+<footer>
+    <p>Papp Máté HTML Beadandó &copy; 2023</p>
+</footer>
+</body>
+    
+    
+    </html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Papp Máté">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="description" content="Ez az oldal bemutatja a PM utazási iroda szolgáltatásait és ajánlatait.">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"> </script>
+    <script src="code.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#ajanlat").validate({ 
+rules: {
+kernev: "required",
+veznev: "required",
+email: {
+required: true,
+email: true
+},
+elfogad: {
+required: true,
+},
+phone:{
+    required: true,
+    number:true,
+    minlength: 11,
+    maxlength: 12
+    
+},
+otime:{
+    required:true
+},
+vtime:{
+    required:true
+},
+hely:{
+    required:true
+}
+},
+
+messages: {
+kernev: " Írd be a keresztneved!",
+veznev: " Írd be a vezetékneved!",
+email: " Valós email címet adj meg!",
+elfogad: " Fogadd el a feltételeinket!",
+phone:"Telefonszámot adj meg! (Csak számokat adj meg.)",
+otime:"Add meg az utazásod idejét",
+vtime:"Add meg a visszautad idejét",
+hely:"Válassz helyszínt",
+},
+        });
+        });
+        </script>
+    <title>PM Utazási Iroda</title>
+</head>
+<body>
+    <header>
+        <h1>PM Utazási Iroda</h1>
+        <h3>Nem hivatalos weboldal, csupán iskolai felhasználásra készült.</h3>
+    </header>
+    
+    <div class="flex-container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+            </ul>
+            <ul>
+                <li><a href="hongkong.html">Hongkong</a></li>
+            </ul>
+            <ul>
+                <li><a href="izland.html">Izland</a></li>
+            </ul>
+            <ul>
+                <li><a href="amerika.html">Amerika</a></li>
+            </ul>
+            <ul>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <ul>
+                <li><a class='active' href="#">Ajánlat</a></li>
+            </ul>
+            <ul>
+                <li><a href="kalkulator.html">Kalkulátor</a></li>
+            </ul>
+        </nav>
+        
+        <form action="alert.html" method="post" id="ajanlat" novalidate>
+            <h2>Ajánlat kéréshez kérjük adja meg adatait!</h2>
+            <table>
+                <tr>
+                    <th colspan="2">Személyes adatok</th>
+                </tr>
+                <tr>
+                    <td><label for="veznev">Vezetéknév</label></td>
+                    <td><input type="text" name="veznev" id="veznev" placeholder="Teszt"></td>
+                </tr>
+                <tr>
+                    <td><label for="kernev">Keresztnév</label></td>
+                    <td><input type="text" name="kernev" id="kernev" placeholder="Elek"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email cím</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="alma@gugli.net"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Telefonszám</label></td>
+                    <td><input type="tel" name="phone" id="phone" placeholder="36701234567"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Utazás adatai</th>
+                </tr>
+                <tr>
+                    <td><label for="otime">Utazás ideje</label></td>
+                    <td><input type="date" name="otime" id="otime"></td>
+                </tr>
+                <tr>
+                    <td><label for="vtime">Visszautazás ideje</label></td>
+                    <td><input type="date" name="vtime" id="vtime"></td>
+                </tr>
+                <tr>
+                    <td><label for="hely1">Izland </label></td>
+                    <td><input type="radio" name="hely" id="hely1"></td>
+                </tr>
+                <tr>
+                    <td><label for="hely2">Hongkong </label></td>
+                    <td><input type="radio" name="hely" id="hely2"></td>
+                </tr>
+                <tr>
+                    <td><label for="hely3">Amerika </label></td>
+                    <td><input type="radio" name="hely" id="hely3"></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Adatkezelési tájékoztató</th>
+                </tr>
+                <tr>
+
+                    <td colspan="2"> <a href="terms.html" target="_blank">Adatkezelési tájékoztató</a>
+                        &nbsp;&nbsp;
+                    <label for="elfogad">Elfogad</label>
+                    <input type="checkbox" name="elfogad" id="elfogad"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"  value="Elküld"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <p>Papp Máté HTML Beadandó &copy; 2023</p>
+    </footer>
+</body>
+</html>
